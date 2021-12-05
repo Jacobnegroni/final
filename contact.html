@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">  
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="images/negronilogo.png"/>  
+    <title> Contact Form </title>
+    <script src="myscripts.js"></script>
+  </head>
+
+  <body class = "site">
+    <header id="header">
+      <a class = "skip" href="#main">Skip to Main Content</a>
+      <nav>
+        <ul>
+          <li><a href = "index.html">Home</a></li>
+          <li><a href = "about.html">About</a></li>
+          <li><a href = "journey.html">Business Journey</a></li>
+          <li class="current"><a href = "contact.html">Contact</a></li>
+          <li><a href = "references.html">Reference</a></li>
+        </ul>
+      </nav>
+  
+    </header>
+  
+    <main>
+      <h1>Invisible</h1>
+      <body>
+        <h3>CONTACT</h3>
+        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                <label for="Name" class="fcf-label">Your name</label>
+                <div class="fcf-input-group">
+                    <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                </div>
+
+            <div class="fcf-form-group">
+              <label for="Email" class="fcf-label">Your email address</label>
+              <div class="fcf-input-group">
+                  <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+              </div>
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">Your message</label>
+                <div class="fcf-input-group">
+                    <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
+            </div>
+
+    </body>
+      <!-- <div class="fcf-body">
+        
+        <div id="fcf-form">
+          <h3 class="fcf-h3">CONTACT</h3>
+          
+          <div class="form-wrapper">
+              <div class="left-side">
+
+
+                <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                    
+                    <div class="fcf-form-group">
+                        <label for="Name" class="fcf-label">First & Last Name</label>
+                        <div class="fcf-input-group">
+                            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                        </div>
+                    </div>
+            
+                    <div class="fcf-form-group">
+                        <label for="Email" class="fcf-label">Email Address</label>
+                        <div class="fcf-input-group">
+                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        </div>
+                    </div>
+            
+                    <div class="fcf-form-group">
+                        <label for="Message" class="fcf-label">Your Message</label>
+                        <div class="fcf-input-group">
+                            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                        </div>
+                    </div>
+            
+                    <div class="fcf-form-group">
+                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+                    </div> -->
+                   
+                   
+                 
+
+<!--               
+            </div> -->
+    
+            <div class="right-side">
+              <h1>Hey! I can be reached at...</h1>
+              <p>  jnegroni@umich.edu  <br>
+                1619 S University Ave   <br>
+                   Ann Arbor, MI   <br>
+               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+  <footer>
+    <p> Copyright © 2021 <br>
+        Negroni Inc </p>
+  </footer>
+</body>
+    </html>
