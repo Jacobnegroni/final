@@ -103,25 +103,22 @@ main {
   padding: 0.5em;
   margin-top: 4.5em;
 }
-
-
-/* references styling */
-#main-ref {
-  display: flex;
+/* grid */
+.grid-container{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 5px;
   justify-content: center;
-  align-items: center;
-  padding-bottom: 80px;
-}
+  }
 
-#main-ref article {
-  margin-top: 1rem;
-}
-
-article img {
-  width: 90%;
-  margin: auto;
-  max-width: 800px;
-  border: none;
+.grid-container div img {
+  float: inherit;
+  padding: 75px;
+  border: none !important;
+  margin: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* references card */
@@ -147,7 +144,6 @@ body {
   width: 100%;
   height: 100%;
   box-shadow: 0 0 15px rgba(5, 5, 5, 0.1);
-
   transition: transform 1s;
   transform-style: preserve-3d;
 }
@@ -174,7 +170,7 @@ body {
 .back {
   background: #b8f6fb;
   color: black;
-  transform: rotateY( 180deg );
+  transform: rotateY( 180deg );button
 }
 
 
@@ -191,13 +187,61 @@ footer {
   margin: auto;
 }
 /* text button_cont button */
-.jake{
+/* .button_cont{
   text-align: center;
   color:white;
   font-size: 25px;
   padding: 0 15px;
   position: relative;
   top: 75px;
+} */
+
+/* CSS BUTTON WITH ANIMATION */
+.wrapbut{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+b{
+  display: block;
+  margin-top: -75px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #4BB543;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+b span{
+  position: relative;
+  z-index: 2;
+}
+
+b:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #0072b1;
+  transition: all .35s;
+}
+
+b:hover{
+  color: #fff;
+}
+
+b:hover:after{
+  width: 100%;
 }
 
   
@@ -231,11 +275,24 @@ input[type=text], select, textarea {
 
 
 
+    /* Styling parap of journey */
+h2, h3{
+  text-align: center;
+  color: #b8f6fb;
+  font-size: 35px;
+}
+
+#parag1, #parag2, #p12, #p16, #para19, #para22 {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  margin: 15px
+
+}
 
 
-/* GRID - when I USE MOBILE VIEW FIRST IT DOES NOT WORK */
-
-.grid-container{
+/* GRID DESKTOP GRID DESKTOP */
+/* .grid-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 1px;
@@ -251,58 +308,11 @@ input[type=text], select, textarea {
   max-width: 80%;
   max-height: 70%;
   padding: 0px;
-  }
-    /* Styling parap of journey */
-h2, h3{
-  text-align: center;
-  color: #b8f6fb;
-  font-size: 35px;
-}
-
-#parag1, #parag2, #p12, #p16, #para19, #para22 {
-  text-align: center;
-  color: white;
-  font-size: 15px;
-  margin-bottom: 15px
-
-}
-/* parallax image */
-.parallax {
-  /* The image used */
-  background-image: url("");
-
-  /* Full height */
-  height: 100%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-
+  } */
 
 /* grid mobile */
-@media only screen and (max-width: 766px){
-  .grid-container{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-gap: 5px;
-    justify-content: center;
+/* @media only screen and (max-width: 766px){
   
-    }
-  
-  .grid-container div img {
-    float: inherit;
-    padding: 75px;
-    border: none !important;
-    margin: 0px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }  
 
 }
 
@@ -354,11 +364,11 @@ h2, h3{
     text-align: center;
     margin-top: 5px;
     margin-bottom: 15px;
-  }
+  } */
 
   /* skip to content */
 
-  .skip {
+  /* .skip {
     position: absolute;
     top: -50px;
     color: #000000;
@@ -370,22 +380,22 @@ h2, h3{
     z-index: 99;
     padding: 0.5em;
     margin-top: 4.5em;
-  } 
+  }  */
    /* Grid images journey */
-  .grid-container{
+  /* .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
-    grid-template-rows: auto autp auto;
+    grid-template-rows: auto auto auto;
   
   }
   .grid-container div img {
     width: 80%;
     height: 80%;
-    }
+    } */
 
   /* Styling parap of journey */
-  h2, h3 {
+  /* h2, h3 {
     text-align: center;
     font-size: 35px;
   }
@@ -394,21 +404,11 @@ h2, h3{
     text-align: center;
     color: white;
     font-size: 15px;
-  }
-
-/* 
-  .aboutme{
-    height: 100vh;
-    width: 100vh;
-  }
-
-  .aboutme p{
-    height: 100vh;
-    width: 100vh;
   } */
+
 /* contact form and flex */
 
-  .form-wrapper{
+  /* .form-wrapper{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -420,21 +420,20 @@ h2, h3{
 
   .right-side{
     flex-basis: 30%;
-  }
+  } */
     /* Reference */
-  .reference-img img{
+  /* .reference-img img{
     height: 80%;
     width: 80%;
   }
-}
+} */
 
 
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1025px) {
   .grid-container{
     grid-template-columns: 1fr 1fr 1fr;
-  
     }
   
   .grid-container div img {
@@ -444,6 +443,17 @@ h2, h3{
     max-height: 70%;
     padding: 0px;
     }
+    /* parallax image */
+  .parallax {
+    background-image: url("../images/parimage.jpeg") !important;
+     /* Full height */
+    height: 100%;
+     /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
 }
 
@@ -689,3 +699,23 @@ html, body {
     text-align: right;
   }
 }
+
+
+/* references styling */
+/* #main-ref {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+#main-ref article {
+  margin-top: 1rem;
+}
+
+article img {
+  width: 90%;
+  margin: auto;
+  max-width: 800px;
+  border: none;
+} */
