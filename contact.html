@@ -1,126 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/html5reset.css">  
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" type="image/png" href="images/negronilogo.png"/>  
-    <title> Contact Form </title>
-    <script src="myscripts.js"></script>
-      <!-- Global Site Tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=TRACKING_ID"></script>
-      <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-214668748-4');
-      </script>
-  </head>
 
-  <body class = "site">
-    <header id="header">
-      <a class = "skip" href="#main">Skip to Main Content</a>
-      <nav>
-        <ul>
-          <li><a href = "index.html">Home</a></li>
-          <li><a href = "about.html">Experiences</a></li>
-          <li><a href = "journey.html">Business Journey</a></li>
-          <li class="current"><a href = "contact.html">Contact</a></li>
-          <li><a href = "references.html">Reference</a></li>
-        </ul>
-      </nav>
-  
-    </header>
-  
-    <main>
-      <h1>Invisible</h1>
-      <body>
-        <h3>CONTACT</h3>
-        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-                <label for="Name" class="fcf-label">Your name</label>
-                <div class="fcf-input-group">
-                    <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-                </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image/png" href="images/negronilogo.png" />
+  <title> Contact Form </title>
+  <script src="myscripts.js"></script>
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=TRACKING_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-214668748-4');
+  </script>
+</head>
 
-            <div class="fcf-form-group">
-              <label for="Email" class="fcf-label">Your email address</label>
-              <div class="fcf-input-group">
-                  <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-              </div>
-            <div class="fcf-form-group">
-                <label for="Message" class="fcf-label">Your message</label>
-                <div class="fcf-input-group">
-                    <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-                </div>
-            </div>
+<body class="site">
+  <header id="header">
+    <a class="skip" href="#main">Skip to Main Content</a>
+    <nav>
+      <ul class="navlinks">
+        <li class="navlinks"><a href="index.html">Home</a></li>
+        <li class="navlinks"><a href="about.html">Experiences</a></li>
+        <li class="navlinks"><a href="journey.html">Business Journey</a></li>
+        <li class="navlinkscurrent"><a href="contact.html">Contact</a></li>
+        <li class="navlinks"><a href="references.html">Reference</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <div class="fcf-form-group">
-                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
-            </div>
+  <body>
+    <h1>Invisible</h1>
+    <main class="contactcontainer">
+      <div class="form-wrapper">
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xzbopnoa"
+          method="post">
+          <fieldset id="fs-frm-inputs">
+            <label for="full-name" class="fcf-label">CONTACT <br><br> Full Name</label>
+            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+            <label for="email-address" class="fcf-label">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required=""><br><br>
+            <label for="message" class="fcf-label">Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="Write Your Message Here" required=""></textarea>
+            <input type="hidden" class="fcf-label" name="_subject" id="email-subject" value="Contact Form Submission">
+          </fieldset>
+          <input type="submit" value="Submit">
+        </form>
 
-    </body>
-      <!-- <div class="fcf-body">
-        
-        <div id="fcf-form">
-          <h3 class="fcf-h3">CONTACT</h3>
-          
-          <div class="form-wrapper">
-              <div class="left-side">
-
-
-                <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
-                    
-                    <div class="fcf-form-group">
-                        <label for="Name" class="fcf-label">First & Last Name</label>
-                        <div class="fcf-input-group">
-                            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-                        </div>
-                    </div>
-            
-                    <div class="fcf-form-group">
-                        <label for="Email" class="fcf-label">Email Address</label>
-                        <div class="fcf-input-group">
-                            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-                        </div>
-                    </div>
-            
-                    <div class="fcf-form-group">
-                        <label for="Message" class="fcf-label">Your Message</label>
-                        <div class="fcf-input-group">
-                            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-                        </div>
-                    </div>
-            
-                    <div class="fcf-form-group">
-                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
-                    </div> -->
-                   
-                   
-                 
-
-<!--               
-            </div> -->
-    
-            <div class="right-side">
-              <h1>Hey! I can be reached at...</h1>
-              <p>  jnegroni@umich.edu  <br>
-                1619 S University Ave   <br>
-                   Ann Arbor, MI   <br>
-               </p>
-            </div>
-          </div>
+     
+        <div class="button_container">
+          <a href="https://www.linkedin.com/in/jacobnegroni" target="_">
+            <button class="btn"><span>LinkedIn</span></button>
+          </a>
         </div>
       </div>
-    </main>
+
+  </body>
+  </main>
 
 
   <footer>
     <p> Copyright © 2021 <br>
-        Negroni Inc </p>
+      Negroni Inc </p>
   </footer>
 </body>
-    </html>
+
+</html>
