@@ -99,19 +99,24 @@ main {
   padding-top: 50px;
   margin-bottom: 50px;
 }
-/* Skip to content */
-.skip {
+
+
+/*skip to main content*/
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
   position: absolute;
-  top: -50px;
-  color: #000000;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
 }
 
-.skip:focus {
-  position: absolute;
-  top: 0px; 
-  z-index: 99;
-  padding: 0.5em;
-  margin-top: 4.5em;
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
 }
 /* grid */
 .grid-container{
@@ -339,6 +344,11 @@ h2, h3{
   .card:hover{
     transition: none;
   }
+  .skip a{
+    -webkit-transition: initial; 
+    transition: initial; 
+  }
+
 }
 /* TABLET AND UP */
 @media only screen and (min-width: 768px){
@@ -481,19 +491,7 @@ h2, h3{
 } 
   
 @media only screen and (min-width: 767px) and (max-width: 1024px){
-    /* skip to content */
-    .skip {
-      position: absolute;
-      top: -50px;
-      color: #000000;
-    }
-    .skip:focus {
-      position: absolute;
-      top: 0px; 
-      z-index: 99;
-      padding: 0.5em;
-      margin-top: 4.5em;
-    } 
+
 /* contact form and flex */
 
   .form-wrapper{
