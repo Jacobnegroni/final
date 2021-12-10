@@ -146,53 +146,6 @@ body {
   font-family: 'Abril Fat face';
 }
 
-/* FLIP CARD */
-.card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  margin: -150px;
-  float: left;
-  perspective: 500px;
-}
-
-.content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 15px rgba(5, 5, 5, 0.1);
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-.card:hover .content {
-  transform: rotateY( 180deg ) ;
-  transition: transform 0.5s;
-}
-
-.front, .back {
-  position: absolute;
-  margin-top: 100px;
-  height: 100%;
-  width: 100%;
-  background: #7404dd;
-  line-height: 300px;
-  color: white;
-  text-align: center;
-  font-size: 60px;
-  border-radius: 5px;
-  backface-visibility: hidden;
-}
-
-.back {
-  background: #49d733;
-  color: black;
-  transform: rotateY( 180deg );
-}
-
-
 /* footer */
 
 footer{
@@ -204,6 +157,7 @@ footer{
   height: 60px;
   width: 100%;
   margin: auto;
+  padding-top: 10px;
 
 }
 
@@ -369,8 +323,11 @@ h2, h3{
   text-align: center;
   color: white;
   font-size: 15px;
-  margin: 15px
-
+  margin: 16px
+}
+/* interest page mobile styling */
+.interestsp h2 {
+  padding: 10px;
 }
 @media screen and (prefers-reduced-motion: reduce) {
   .but{
@@ -384,7 +341,7 @@ h2, h3{
   }
 }
 /* TABLET AND UP */
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: 768px){
   nav {
     padding: 0.5rem 0;
   }
@@ -396,6 +353,130 @@ h2, h3{
     gap: 1.5rem;
     width: 100%;
   } 
+  .interestsp h2 {
+    visibility: hidden;
+  }
+
+  /* FLIP CARD */
+  .card {
+    position: fixed;
+    top: 70px;
+    left: 70px;
+    width: 250px;
+    height: 250px;
+    perspective: 500px;
+  }
+
+  .content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(5, 5, 5, 0.1);
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+
+  .card:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+  }
+
+  .front, .back, .back2, .back3, .back4 {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #49d733;
+    line-height: 300px;
+    color: white;
+    text-align: center;
+    /* font-size: 40px; */
+    border-radius: 5px;
+    backface-visibility: hidden;
+  }
+  .front{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+  .back {
+    /* background: #49d733; */
+    background-image: url("../images/meta.jpeg");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* color: black; */
+    transform: rotateY( 180deg );
+  }
+
+
+  /* CARD 2 */
+  .card2 {
+    position: fixed;
+    top: 70px;
+    right: 70px;
+    width: 250px;
+    height: 250px;
+    perspective: 250px;
+  }
+  .card2:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+  }
+
+  .back2 {
+    /* background: #49d733; */
+    background-image: url("../images/bored.png");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* color: black; */
+    transform: rotateY( 180deg );
+  }
+  /* CARD 3 */
+  .card3 {
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    width: 250px;
+    height: 250px;
+    perspective: 500px;
+  }
+  .card3:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+  }
+  .back3 {
+    /* background: #49d733; */
+    background-image: url("../images/work.jpeg");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* color: black; */
+    transform: rotateY( 180deg );
+  }
+  /* CARD 4 */
+  .card4 {
+    position: fixed;
+    bottom: 70px;
+    left: 70px;
+    width: 250px;
+    height: 250px;
+    perspective: 500px;
+  }
+  .card4:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+  }
+  .back4 {
+    /* background: #49d733; */
+    background-image: url("../images/BigHouse.jpeg");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* color: black; */
+    transform: rotateY( 180deg );
+  }
+
   
 } 
   
@@ -432,8 +513,6 @@ h2, h3{
 
 } 
 
-
-
   
 @media only screen and (min-width: 1025px){
   /* GRID DESKTOP */
@@ -448,10 +527,14 @@ h2, h3{
     max-height: 70%;
     padding: 0px;
     }
+ 
+  #para22{
+    padding-bottom: 265px;
+  }
 
     /* parallax image - references FOR DESKTOP ONLY CURRENTLY NOT WORKING*/
   .parallax {
-    background-image: url("../images/parimage.jpeg");
+    background-image: url("../images/network.jpeg");
     /* Full height */
     min-height: 100vh;
     min-width: 100vw;
@@ -462,9 +545,7 @@ h2, h3{
     background-size: cover;
   }
 
-  .ref-main{
-    padding: 0;
-  }
+
 
   /* ABOUT TIMELINE */
   html, body {
@@ -713,26 +794,6 @@ h2, h3{
 
 
 
-
-
-/* GRID DESKTOP GRID DESKTOP */
-/* .grid-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 1px;
-  justify-content: center;
-  grid-template-rows: auto auto auto;
-  grid-row-gap: 1px;
-
-  }
-
-.grid-container div img {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  max-width: 80%;
-  max-height: 70%;
-  padding: 0px;
-  } */
 
 
   @media only screen and (max-width: 768px) {
